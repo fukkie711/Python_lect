@@ -22,6 +22,7 @@ mojiretsu = "文字列"
 print(mojiretsu)
 print("文字列")
 
+
 a_lylic = "でもね私のエネルギーは"
 a_lylic = a_lylic + "すでにインフィニティだよ"
 print(a_lylic)
