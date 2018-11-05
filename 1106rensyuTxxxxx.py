@@ -1,3 +1,5 @@
+
+
 # 下のやつを実行するのに必要
 def destiny_tank2(num):
     tanks = ["No IV typeD", "No III typeJ", "Churchill Mk.VII", "M4 sharman", "P40", "T-34/76"]
@@ -21,6 +23,15 @@ from random import randint
 num = randint(0, 10)
 tank = destiny_tank3(num)
 print("今日あなたが乗るべき幸運の戦車は", tank , "です")
+
+#　ローカル変数を関数の外で使う（実行エラーになる）
+# 実行後はinnner_varを#でコメントアウトしておく
+def test_func(arg1):
+    inner_var = 100
+    print(arg1+inner_var)
+
+test_func(10)
+# innner_var
 
 # p.105の下のコード（calc_variance()関数の定義）
 def calc_variance(a_list):
@@ -48,3 +59,28 @@ pravda_team_variance = calc_variance(pravda_team)
 print(monk_team_variance**0.5)
 print(volley_team_variance**0.5)
 print(pravda_team_variance**0.5)
+
+# randomモジュールのインポート
+import random
+print(random.random())
+print(random.randint(0, 6))
+a_list = [0, 1, 2, 3, 4, 5]
+random.shuffle(a_list)
+print(a_list)
+print(random.choice(a_list))
+
+# asを使ったimport文の記法
+import random as ra
+print(ra.random())
+print(ra.randint(0,6))
+ra.shuffle(a_list)
+print(a_list)
+print(ra.choice(a_list))
+
+# fromをつかったインポート
+from random import random, randint, shuffle, choice
+print(random())
+print(randint(0,6))
+shuffle(a_list)
+print(a_list)
+print(choice(a_list))
