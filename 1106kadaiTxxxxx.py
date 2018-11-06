@@ -70,3 +70,4 @@ print(dice_num_simulation(500))
 # 課題4
 from matplotlib import pyplot
 pyplot.bar([1, 2, 3, 4, 5, 6], [one, two, three, four, five, six])
+pyplot.show()
