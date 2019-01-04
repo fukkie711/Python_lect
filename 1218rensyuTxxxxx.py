@@ -43,7 +43,7 @@ for idx in range(len(speeds)):      # リストの長さ分ループ
     y = int(armors[idx])
     # 散布図を描く
     plt.scatter(x, y, marker=markers[idx])
-# plt.show()
+plt.show()
 #IV号戦車(o) LT-38(v) 八九式中戦車(^) III号突撃砲(<) M3中戦車(>)
 
 # split()した文字列をjoin()で連結
