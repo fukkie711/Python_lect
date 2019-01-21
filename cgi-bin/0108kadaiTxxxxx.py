@@ -3,12 +3,11 @@ import cgi
 import cgitb
 import os.path
 import html
-
 #ブラウザでのデバッグを有効にする
 cgitb.enable()
-
 #全体の設定
 FILE_LOG = "chat-log.txt"
+
 #HTMLを画面に出力する
 def print_html(body):
     #ヘッダを出力
@@ -22,7 +21,7 @@ def print_html(body):
 <body>
 <div><form>
 名前：<input type="text" name="name" size="8">
-本文：<input type="text" name="body" size="20">
+本文：<input type="text" name="body" size="20">$
 <input type="submit" value="発言">
 <input type="hidden" name="mode" value="write">
 </form></div><hr>
@@ -39,6 +38,7 @@ def mode_read(form):
         with open(FILE_LOG, "r", encoding='utf-8') as f:
             log = f.read()
     print_html(log)
+
 #任意のURLにジャンプする
 def jump(url):
     #ヘッダを出力
@@ -79,5 +79,6 @@ def main():
     else:
         mode_read(form)
 
+#最後
 if __name__ == "__main__":
     main()
